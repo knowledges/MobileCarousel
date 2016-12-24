@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/index.css">
+	<style>
+		.carousel{
+			display: line-block;
+			width: 100%;
+			height: 18rem;
+			position: relative;
+			overflow: hidden
+			background: #666;
+		}
+		.carousel .carousel-content{
+			display: inline-block;
+			/*TODO 根据  (.carousel-slide 的宽度 + margin )* 总个数 */
+			width: 1580px;
+			height: 100%;
+			position: absolute;
+			-webkit-transition-duration: 0ms;
+			transition-duration: 0ms;
+			-webkit-transform: translate3d(-20px,0,0);
+			transform: translate3d(-20px,0,0);
+		}
+		.carousel .carousel-content .carousel-slide{
+			float: left;
+			display: inline-block;
+			/*TODO 后面这里要获取当前屏幕实际的宽度*/
+			height: 100%;
+			/*TODO 动态判断是否要这个margin*/
+			margin-left: 20px; 
+		}
+		.carousel .carousel-content .carousel-slide:nth-of-type(1){
+			background: red;
+		}
+		.carousel .carousel-content .carousel-slide:nth-of-type(2){
+			background: orange;	
+		}
+		.carousel .carousel-content .carousel-slide:nth-of-type(3){
+			background: yellow;
+		}
+		.carousel .carousel-content .carousel-slide:nth-of-type(4){
+			background: green;
+		}
+		.carousel .carousel-pagination{
+			position: absolute;
+			bottom: 10px;
+			z-index: 9;
+			display: inline-block;
+			width: 100%;
+			text-align: center;
+		}
+		.carousel .carousel-pagination .carousel-pagination-bullet{
+			display: inline-block;
+			width: 8px;
+			height: 8px;
+			border-radius: 50px;
+			background: rgba(0,0,0,0.4);
+		}
+		.actived{
+			background: #007aff;
+		}
+	</style>
+</head>
+<body>
+	<div id="carousel" class="carousel">
+		<div class="carousel-content clearfix">
+			<div class="carousel-slide"></div>
+			<div class="carousel-slide"></div>
+			<div class="carousel-slide"></div>
+			<div class="carousel-slide"></div>
+		</div>
+		<div class="carousel-pagination">
+			<span class="carousel-pagination-bullet actived"></span>
+			<span class="carousel-pagination-bullet"></span>
+			<span class="carousel-pagination-bullet"></span>
+			<span class="carousel-pagination-bullet"></span>
+		</div>
+	</div>
+</body>
+<script src="js/index.js"></script>
+</html>
