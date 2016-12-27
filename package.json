@@ -1,0 +1,30 @@
+{
+  "name": "carousel",
+  "version": "1.0.1",
+  "description": "手机轮播图",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --devtool eval --progress --colors",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/knowledges/MobileCarousel/"
+  },
+  "keywords": [
+    "knowledges"
+  ],
+  "author": "qiubl",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "bundle-loader": "^0.5.4",
+    "css-loader": "^0.26.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
